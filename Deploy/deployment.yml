@@ -19,6 +19,7 @@ spec:
         command: ["kubectl","proxy","--port=8001"]
       - name: app
         image: magalixcorp/operator
+        imagePullPolicy: IfNotPresent
         env:
           - name: res_namespace
             valueFrom:
